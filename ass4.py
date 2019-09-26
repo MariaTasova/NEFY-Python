@@ -1,12 +1,13 @@
 def is_prime(n):
-    for number in range(2, abs(n)):
-        if abs(n) % number == 0:
-            return False
-        else:
-            return True
+    if n <= 1:
+        return False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
 
-
-print(is_prime(17))
+print(is_prime(14))
 
 
 

@@ -7,7 +7,6 @@ def lru_cache(func):
         result = func(*args, **kwargs)
         cache[args] = result
         return result
-
     return lru_cache
 
 @lru_cache
@@ -20,7 +19,3 @@ def product(*nums, scale = 2):
 print(product(3, 5, scale=10))
 print(product(3, 5, scale=1))
 print(product(3, 5, scale=2))
-
-
-
-

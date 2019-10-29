@@ -1,1 +1,10 @@
+def LRU_Cache(function):
+    def wrapper(*args, **kwargs):
+        c = []
+        print("Result:", c.append(function))
+        return function(*args, **kwargs)
+    return wrapper
 
+@LRU_Cache
+def some_function(a, b, c = 3):
+    return a + b + c
